@@ -9,7 +9,7 @@
    <div class="col-12">
       <div class="card">
          <div class="card-header">
-               <h3 class="card-title">Fixed Header Table</h3>
+               <h3 class="card-title">Listagem de Clientes</h3>
                <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
                      <input type="text" name="table_search" class="form-control float-right" placeholder="Search" />
@@ -34,11 +34,22 @@
                      </tr>
                   </thead>
                   <tbody>
-                     <?php 
-                        $data = $conn->query('SELECT * FROM cliente');
-                        print_r($data);
-                     ?>
-                     </tr>
+                     
+                        <?php 
+                           $data = $conn->query('SELECT * FROM cliente');
+                           while($row = $data->fetch(PDO::FETCH_ASSOC)):
+                        ?>
+                        <tr>
+                           <td><?php echo $row['idCliente']; ?></td>
+                           <td><?php echo $row['NomeCliente']; ?></td>
+                           <td><?php echo $row['EmailCliente']; ?></td>
+                           <td><?php echo $row['Telefone']; ?></td>
+                           <td><?php echo $row['cpfCliente']; ?></td>
+                        </tr>
+                        <?php
+                           endwhile;
+                        ?>
+                     
                   </tbody>
                </table>
          </div>
