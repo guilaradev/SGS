@@ -31,6 +31,7 @@
                            <th>Email</th>
                            <th>Telefone</th>
                            <th>CPF</th>
+                           <th>Editar</th>
                      </tr>
                   </thead>
                   <tbody>
