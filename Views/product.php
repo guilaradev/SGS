@@ -20,7 +20,7 @@ include('sidebar.php');
                </div>
          </div>
 
-         <div class="card-body table-responsive p-0" style="height: 300px;">
+         <div class="card-body table-responsive p-0" style="height: 80vh;">
                <table class="table table-head-fixed text-nowrap">
                   <thead>
                      <tr>
@@ -29,11 +29,12 @@ include('sidebar.php');
                            <th>Situação</th>
                            <th>Quantidade</th>
                            <th>Valor</th>
+                           <th>Editar </th>
                      </tr>
                   </thead>
                   <tbody>
                         <?php 
-                           $data = $conn->query('SELECT * FROM estoque');
+                           $data = $conn->query('SELECT * FROM produtos');
                            
                            while($row = $data->fetch(PDO::FETCH_ASSOC)):
                         ?>
@@ -49,10 +50,24 @@ include('sidebar.php');
                            ?></td>
                            <td><?php echo $row['quantProd']; ?></td>
                            <td>R$ <?php echo $row['precoProd'];?></td>
+                           <td>
+                              <a href="">
+                                 <i class="fas fa-pen-square">
+                                    
+                                 </i>
+                              </a>
+                              
+                              <a style="color:red" href="../Controllers/deleteProduct.php?codProd=<?php echo $row["codProd"]; ?> ">
+                                 <i class="fas fa-trash">
+                                 
+                                 </i>
+                              </a>
+                           </td>
                         </tr>
                         <?php
                            endwhile;
                         ?>
+                        
                   </tbody>
                </table>
          </div>

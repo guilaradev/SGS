@@ -22,7 +22,7 @@
                </div>
          </div>
 
-         <div class="card-body table-responsive p-0" style="height: 300px;">
+         <div class="card-body table-responsive p-0" style="height: 80vh;">
                <table class="table table-head-fixed text-nowrap">
                   <thead>
                      <tr>
@@ -45,6 +45,19 @@
                            <td><?php echo $row['EmailCliente']; ?></td>
                            <td><?php echo $row['Telefone']; ?></td>
                            <td><?php echo $row['cpfCliente']; ?></td>
+                           <td>
+                              <a href="">
+                                 <i class="fas fa-pen-square">
+                                    
+                                 </i>
+                              </a>
+                              
+                              <a style="color:red" href="../Controllers/deleteClient.php?idCliente=<?php echo $row["idCliente"]; ?> ">
+                                 <i class="fas fa-trash">
+                                 
+                                 </i>
+                              </a>
+                           </td>
                         </tr>
                         <?php
                            endwhile;

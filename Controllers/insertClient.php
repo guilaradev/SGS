@@ -22,6 +22,5 @@ if ($_POST) {
          window.location='../Views/addClient.php'; 
          </script>";
    exit;
-   
- }
+}
 ?>
