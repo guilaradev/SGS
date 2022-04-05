@@ -8,7 +8,7 @@
    <div class="login-box">
       <div class="card card-outline card-primary">
          <div class="card-header text-center">
-            <a href="login.php" class="h1"><b>SGS</b> LOGIN</a>
+            <a href="login.php" class="h1"><b>SGS</b> Ephesto</a>
          </div>
          <div class="card-body">
             <p class="login-box-msg">Faça login para iniciar sua sessão</p>
