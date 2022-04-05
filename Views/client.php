@@ -52,7 +52,6 @@
                                     
                                  </i>
                               </a>
-                              
                               <a style="color:red" href="../Controllers/deleteClient.php?idCliente=<?php echo $row["idCliente"]; ?> ">
                                  <i class="fas fa-trash">
                                  
@@ -63,7 +62,6 @@
                         <?php
                            endwhile;
                         ?>
-                     
                   </tbody>
                </table>
          </div>
